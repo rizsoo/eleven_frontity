@@ -45,11 +45,15 @@ const HeaderTitle = styled.div`
     font-weight: 800;
     @media (max-width: 800px) {
       line-height: 25px;
+      font-size: 2rem;
     }
   }
   p {
     color: #6d6d6d;
     font-weight: 500;
+    @media (max-width: 800px) {
+      margin-top: 5px;
+    }
   }
   h3:hover{
     text-decoration: underline;
@@ -79,6 +83,7 @@ const Menu = styled.nav`
   flex-direction: row;
   font-weight: 800;
   margin-left: 35px;
+  z-index: 1;
   & > a {
     margin-right: 1em;
     color: #1967B5;
@@ -94,7 +99,7 @@ const Menu = styled.nav`
     right: 0;
     flex-direction: column;
     gap: 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     padding: 30px;
     padding-top: 50px;
@@ -106,11 +111,17 @@ const Menu = styled.nav`
   }
 `
 const OpenMenu = styled.div`
+  ion-icon {
+    font-size: 50px;
+  }
   @media (min-width: 800px) {
-    display: none;
+    display: none;  
   }
 `
 const CloseMenu = styled.div`
+  ion-icon {
+    font-size: 50px !important;
+  }
   @media (min-width: 800px) {
     display: none;
   }
@@ -138,6 +149,9 @@ const Instagram = styled.div`
 `
 const Logo = styled.img`
     max-height: 60px;
+    @media (max-width: 800px) {
+      max-height: 90px;
+    }
 `
 
 export default connect(HeaderContent)
