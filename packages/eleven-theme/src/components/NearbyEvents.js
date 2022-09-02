@@ -20,7 +20,7 @@ const NearbyEvents = ({ state, libraries }) => {
       {isPopUp? <Popup /> : null}
       {isPopUp? <Shadow onClick={() => setIsPopUp(false)} /> : null}
       <Items>
-        {data.items.filter(el => state.source[el.type][el.id].categories[0] === 4).slice(0, 3).map((item) => {
+        {data.items.filter(el => state.source[el.type][el.id].categories[0] === 4).slice(0, 4).map((item) => {
           const post = state.source[item.type][item.id]
 
           return (
@@ -37,6 +37,7 @@ const NearbyEvents = ({ state, libraries }) => {
           )
         })}
       </Items>
+      <Link link={"/esemenyek/"} ><More>További eseményeink...</More></Link>
     </>
   )
 }
@@ -145,6 +146,13 @@ const Shadow = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+`
+const More = styled.h3`
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  margin-bottom: 20px;
 `
 
 export default connect(NearbyEvents)
