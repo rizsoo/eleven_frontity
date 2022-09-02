@@ -53,7 +53,7 @@ const Title = styled.h4`
   display: block;
   text-transform: uppercase;
   text-align: left;
-  width: 800px;
+  width: 100%;
   font-weight: 800;
   margin-top: 25px;
 `

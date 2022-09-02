@@ -18,7 +18,8 @@ const HeaderContent = () => {
         </HeaderTitle>
       </SubHeader>
       <SubHeader>
-        {isMobile && !isMenuOpen ? null : <Menu>
+        {isMobile && !isMenuOpen ? null : <Menu onClick={() => setIsMenuOpen(false)}>
+          <CloseMenu><ion-icon name="close-circle-outline"></ion-icon></CloseMenu >
           <Link link="/esemenyek">Események</Link>
           <Link link="/sportok">Sportok</Link>
           <Link link="/rolunk">Rólunk</Link>
@@ -32,7 +33,8 @@ const HeaderContent = () => {
           <Facebook><Link target="_blank" link="https://www.facebook.com/elevensportclub"><ion-icon name="logo-facebook"></ion-icon></Link></Facebook>
           <Instagram><Link target="_blank" link="https://www.instagram.com/eleven.hungary/"><ion-icon name="logo-instagram"></ion-icon></Link></Instagram>
         </Socials>
-        {isMenuOpen ? <CloseMenu onClick={() => setIsMenuOpen(false)}><ion-icon name="close-circle-outline"></ion-icon></CloseMenu > : <OpenMenu onClick={() => setIsMenuOpen(true)}><ion-icon name="apps-outline"></ion-icon></OpenMenu> }
+    
+        {isMenuOpen ? null : <OpenMenu onClick={() => setIsMenuOpen(true)}><ion-icon name="apps-outline"></ion-icon></OpenMenu>}
       </SubHeader>
             
     </Header>
