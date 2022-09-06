@@ -7,6 +7,7 @@ import { useState } from 'react'
 
 const NearbyEvents = ({ state, libraries }) => {
   const data = state.source.get(state.router.link)
+  console.log(data);
   const Html2React = libraries.html2react.Component;
   const [isPopUp, setIsPopUp] = useState(false);
   function handlePopUpEvent() {
@@ -115,6 +116,7 @@ const Items = styled.div`
     font-size: 14px;
     color: black;
   }
+  
 `
 const EventTitle = styled.h4`
   font-size: 2.8rem;

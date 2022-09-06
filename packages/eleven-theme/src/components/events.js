@@ -2,16 +2,20 @@ import React from "react"
 import { connect, styled } from "frontity"
 import Link from "@frontity/components/link"
 import FeaturedMedia from "./featured_media"
+import { useEffect } from 'react'
 
-const Events = ({ state, libraries }) => {
-  const data = state.source.get("/");
+const Events = ({ state, libraries, actions }) => {
+  useEffect(() => {
+    actions.source.fetch("/");
+  }, []);
+  const res = Object.values(state.source.post);
   const Html2React = libraries.html2react.Component;
-  console.log(data);
+  
   return (
     <>
       <Title>Összes eseményünk</Title>
       <Items>
-        {data.items.filter(el => state.source[el.type][el.id].categories[0] === 4).map((item) => {
+        {res.filter(el => state.source[el.type][el.id].categories[0] === 4).map((item) => {
           const post = state.source[item.type][item.id]
           return (
               <EventItem key={item.id}>
@@ -68,7 +72,7 @@ const EventItem = styled.div`
   @media (min-width: 800px) {
     min-height: 350px;
   }
-  
+  margin: 18px 0;
   font-size: 1.2em;
   color: steelblue;
   text-decoration: none;
@@ -91,7 +95,6 @@ const EventItem = styled.div`
     }
   }
   @media (min-width: 800px) {
-    margin: 20px 0;
     height: 250px;
     width: calc(100% / 3 - 10px);
   }

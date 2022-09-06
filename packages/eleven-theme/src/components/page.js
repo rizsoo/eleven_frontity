@@ -22,6 +22,13 @@ const PageTitle = styled.h2`
 const PageContent = styled.div`
   background-color: white;
   padding: 15px;
+  img {
+    max-height: 400px;
+    height: 100%;
+    width: auto;
+    padding: 20px;
+    margin: 0 auto !important;
+  }
 `
 
 export default connect(Page) 

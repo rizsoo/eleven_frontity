@@ -34,7 +34,7 @@ const HeaderContent = () => {
           <Instagram><Link target="_blank" link="https://www.instagram.com/eleven.hungary/"><ion-icon name="logo-instagram"></ion-icon></Link></Instagram>
         </Socials>
     
-        {isMenuOpen ? null : <OpenMenu onClick={() => setIsMenuOpen(true)}><ion-icon name="apps-outline"></ion-icon></OpenMenu>}
+        {isMenuOpen ? null : <OpenMenu onClick={() => setIsMenuOpen(true)}><ion-icon name="compass-outline"></ion-icon></OpenMenu>}
       </SubHeader>
             
     </Header>

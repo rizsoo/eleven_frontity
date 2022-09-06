@@ -2,16 +2,21 @@ import React from "react"
 import { connect, styled } from "frontity"
 import Link from "@frontity/components/link"
 import FeaturedMedia from "./featured_media"
+import { useEffect } from 'react'
 
-const Sports = ({ state, libraries }) => {
-  const data = state.source.get("/");
+const Sports = ({ state, libraries, actions }) => {
+  useEffect(() => {
+    actions.source.fetch("/");
+  }, []);
+  const res = Object.values(state.source.post);
+  // const data = state.source.get("/");
   const Html2React = libraries.html2react.Component;
-  console.log(data);
+  
   return (
     <>
       <Title>Sportolási lehetőségek</Title>
       <Items>
-        {data.items.filter(el => state.source[el.type][el.id].categories[0] === 6).map((item) => {
+        {res.filter(el => state.source[el.type][el.id].categories[0] === 6).map((item) => {
           const post = state.source[item.type][item.id]
           return (
               <Item key={item.id}>
@@ -59,7 +64,7 @@ const Item = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   
-  
+  margin: 18px 0;
   font-size: 1.2em;
   color: steelblue;
   text-decoration: none;
@@ -82,7 +87,6 @@ const Item = styled.div`
     }
   }
   @media (min-width: 800px) {
-    margin: 20px 0;
     height: 250px;
     width: calc(100% / 3 - 10px);
   }
