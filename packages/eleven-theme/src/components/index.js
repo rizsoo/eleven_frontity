@@ -11,9 +11,35 @@ import Page from "./page"
 import HeaderContent from "./HeaderContent";
 import Sports from "./sports";
 import Events from "./events";
+import Team from "./team";
 
-const Root = ({ state, actions }) => {
+export const portfolioHand = {
+  pattern: "/portfolio",
+  func: async ({ route, params, state, libraries }) => {
+    const response = await libraries.source.api.get({
+      endpoint: "/",
+      params: {
+          per_page: 100,
+          _embed: true
+        }
+    });
+
+    const items = await libraries.source.populate({ response, state });
+
+    Object.assign(state.source.data[route], {
+      isPortfolioType: true,
+      items: items.items,
+      items
+    });
+    
+  }
+};
+
+const Root = ({ state, actions, libraries }) => {
     const data = state.source.get(state.router.link)
+    console.log(data);
+    // const result = fetchHundredData.items;
+    // console.log(result);
   return (
     <>
         <Head>
@@ -66,6 +92,7 @@ const Root = ({ state, actions }) => {
             <NearbyEvents when={data.isArchive} />
             <Sports when={data.isSports} />
             <Events when={data.isEvents} />
+            <Team when={data.isTeam} />
             <Post when={data.isPost} />
             <Page when={data.isPage} />
             <Error when={data.isError} />
