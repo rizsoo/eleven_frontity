@@ -17,6 +17,10 @@ const elevenTheme = {
         "/esemenyek/": {
           isEvents: true,
           isReady: true
+        },
+        "/rolunk/": {
+          isTeam: true,
+          isReady: true
         }
       },
     },  

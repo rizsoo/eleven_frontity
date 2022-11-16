@@ -3,6 +3,7 @@ import { connect, styled } from "frontity"
 import Link from "@frontity/components/link"
 import FeaturedMedia from "./featured_media"
 import { useEffect } from 'react'
+import { portfolioHand } from "."
 
 const Sports = ({ state, libraries, actions }) => {
   useEffect(() => {
