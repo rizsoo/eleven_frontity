@@ -66,11 +66,15 @@ const ItemText = styled.div`
   position: relative;
 `
 const EventItem = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  //flex-direction: column;
+  grid-template-rows: 1fr 1fr;
   justify-content: flex-end;
   @media (min-width: 800px) {
     min-height: 350px;
+    p {
+      margin: 0px !important;
+    }
   }
   margin: 18px 0;
   font-size: 1.2em;
@@ -91,7 +95,7 @@ const EventItem = styled.div`
   }
   @media (max-width: 800px) {
     img {
-      max-height: 110px !important;
+      max-height: 200px !important;
     }
   }
   @media (min-width: 800px) {
