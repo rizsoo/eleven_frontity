@@ -42,6 +42,12 @@ const PostText = styled.div`
   padding: 20px;
   padding-left: 30px;
   background-color: white;
+  @media (min-width: 800px) {
+    padding: 40px 100px;
+  }
+  img {
+    margin-bottom: 1rem;
+  }
 `
 
 const Shadow = styled.div`

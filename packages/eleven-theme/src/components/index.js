@@ -81,6 +81,9 @@ const Root = ({ state, actions, libraries }) => {
               color: black;
               text-decoration: none;
             }
+            p {
+              margin-bottom: 1.1rem;
+            }
             `}
         />
       <Header isPostType={data.isPostType} isPage={data.isPage}>

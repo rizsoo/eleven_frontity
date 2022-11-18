@@ -13,9 +13,9 @@ const Team = ({ state, libraries, actions }) => {
   
   return (
     <>
-      <Title>Csapatunk</Title>
       <h4>Mi is az az ELEVEN?!</h4>
       <p>Sport és közösség. Programjainkra olyan fiatalokat várunk akik hajszolnák az adrenalint, szeretnek felnőttként is játszani és nyitottak különféle outdoor sportágak felé. Ha nincs elég motivációd, vagy éppen társaságod elmenni edzeni, vagy már régóta kipróbálnál egy ilyen sportot de nem volt kivel, akkor van egy jó hírünk, mi vagyunk a megoldás! Gyere velünk strandröpizni, hegyetmászni, falatmászni, bringázni, korizni, síelni, szörfözni, stb… és tedd mindezt úgy, hogy minden alklaommal új embereket ismersz meg, vagy éppen legjobb barátaidat hozod magaddal!</p>
+      <Title>Csapatunk</Title>
       <Items>
         {res.filter(el => state.source[el.type][el.id].categories[0] === 9).map((item) => {
           const post = state.source[item.type][item.id]
