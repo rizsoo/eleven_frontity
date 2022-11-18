@@ -81,9 +81,6 @@ const Root = ({ state, actions, libraries }) => {
               color: black;
               text-decoration: none;
             }
-            p {
-              margin-bottom: 1.1rem;
-            }
             `}
         />
       <Header isPostType={data.isPostType} isPage={data.isPage}>
@@ -121,7 +118,8 @@ const Main = styled.main`
   }
   p {
     line-height: 1.25em;
-    margin-bottom: 0.75em;
+    margin-bottom: 1.2em;
+    line-height: 1.4rem;
   }
   figcaption {
     color: #828282;

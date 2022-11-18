@@ -5,11 +5,11 @@ import { connect, styled } from "frontity"
 const PostHeader = ({title, post, handlePopUpEvent}) => {
   return (
     <PostTitle>
-        <div>
+        <PostHeaderContent>
           {title}
           {post.categories[0] === 4 ?<PostInnerData><ion-icon name="calendar-outline" /><p>{post.acf.date}</p></PostInnerData>: null}
           {post.categories[0] === 4 ?<PostInnerData><ion-icon name="location-outline" /><p>{post.acf.location}</p></PostInnerData>: null}
-        </div>
+        </PostHeaderContent>
         {post.categories[0] === 4 ? <SignUp onClick={handlePopUpEvent}>Jelentkezés</SignUp> : null}
     </PostTitle>
   )
@@ -22,7 +22,6 @@ const PostTitle = styled.div`
   border-left: 4px solid #55C1FF;;
   font-size: 2rem;
   font-weight: 800;
-
   @media (min-width: 800px) {
     display: flex;
     justify-content: space-between;
@@ -31,6 +30,11 @@ const PostTitle = styled.div`
   & > p {
     margin: 0;
   }
+`
+const PostHeaderContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 `
 const SignUp = styled.h4`
   color: white;
@@ -43,6 +47,9 @@ const SignUp = styled.h4`
   padding: 9px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  @media (max-width: 800px) {
+    margin-top: 15px;
+  }
   `
 const PostInnerData = styled.div`
   p {
