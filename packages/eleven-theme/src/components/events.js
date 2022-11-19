@@ -22,6 +22,7 @@ const Events = ({ state, libraries, actions }) => {
   //   getData()
   // }, [])
   
+  
   return (
     <>
       <Title>Naptár</Title>
