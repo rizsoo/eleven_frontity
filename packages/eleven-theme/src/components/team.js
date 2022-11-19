@@ -13,8 +13,21 @@ const Team = ({ state, libraries, actions }) => {
   
   return (
     <>
-      <h4>Mi is az az ELEVEN?!</h4>
-      <p>Sport és közösség. Programjainkra olyan fiatalokat várunk akik hajszolnák az adrenalint, szeretnek felnőttként is játszani és nyitottak különféle outdoor sportágak felé. Ha nincs elég motivációd, vagy éppen társaságod elmenni edzeni, vagy már régóta kipróbálnál egy ilyen sportot de nem volt kivel, akkor van egy jó hírünk, mi vagyunk a megoldás! Gyere velünk strandröpizni, hegyetmászni, falatmászni, bringázni, korizni, síelni, szörfözni, stb… és tedd mindezt úgy, hogy minden alklaommal új embereket ismersz meg, vagy éppen legjobb barátaidat hozod magaddal!</p>
+      <Title>Mi is az az ELEVEN?!</Title>
+        <Items>
+        {res.filter(el => state.source[el.type][el.id].categories[0] === 10).map((i) => {
+          const post = state.source[i.type][i.id]
+          console.log(post);
+          return (
+              <HeaderItem key={i.id}>
+                  <HeaderText>
+                    <Html2React html={post.content.rendered} />
+                  </HeaderText>
+                  <FeaturedMedia id={post.featured_media} />
+              </HeaderItem>
+          )
+        })}
+        </Items>
       <Title>Csapatunk</Title>
       <Items>
         {res.filter(el => state.source[el.type][el.id].categories[0] === 9).map((item) => {
@@ -23,7 +36,7 @@ const Team = ({ state, libraries, actions }) => {
               <EventItem key={item.id}>
                   <FeaturedMedia id={post.featured_media} />
                   <ItemText>
-                    <Link key={item.id} link={post.link}><EventTitle>{post.title.rendered}</EventTitle></Link>
+                    <EventTitle>{post.title.rendered}</EventTitle>
                     <Html2React html={post.excerpt.rendered} />
                   </ItemText>                
               </EventItem>
@@ -47,6 +60,19 @@ const Title = styled.h4`
     margin-bottom: 25px;
   }
 `
+const HeaderText = styled.div`
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  p {
+    letter-spacing: 0.5px;
+    line-height: 1.1rem;
+    margin: 0;
+  }
+
+`
 const ItemText = styled.div`
   width: 100%;
   padding: 13px 20px 13px 13px;
@@ -58,17 +84,27 @@ const ItemText = styled.div`
   
   height: 100%;
   background-color: white;
-  p {
-    letter-spacing: 0.5px;
-    line-height: 1.1rem;
-    margin: 0;
-  }
+
   h4 {
     font-size: 1.5rem;
   }
   position: relative;
   @media (max-width: 800px) {
     gap: 10px;
+  }
+`
+const HeaderItem = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 18px 0;
+  img {
+    min-width: 100%;
+    min-height: 100% !important;
+    object-fit: cover;
+  }
+  @media (max-width: 800px) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 `
 const EventItem = styled.div`
