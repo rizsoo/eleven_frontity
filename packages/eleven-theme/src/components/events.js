@@ -10,9 +10,22 @@ const Events = ({ state, libraries, actions }) => {
   }, []);
   const res = Object.values(state.source.post);
   const Html2React = libraries.html2react.Component;
+
+  // useEffect(() => {
+  //   async function getData() {
+  //     const response = await fetch(
+  //       `https://calendar.google.com/calendar/ical/elevenhungary%40gmail.com/public/basic.ics`
+  //     )
+  
+  //     console.log(response)
+  //   }
+  //   getData()
+  // }, [])
   
   return (
     <>
+      <Title>Naptár</Title>
+      <Calendar src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23f5efe0&ctz=Europe%2FBudapest&showTitle=0&showDate=1&showPrint=0&showCalendars=0&showTz=0&mode=WEEK&title=Es%C3%A9nyek&src=ZWxldmVuaHVuZ2FyeUBnbWFpbC5jb20&color=%23039BE5" style={{borderWidth: "0"}} width="100%" height="300" frameborder="0" scrolling="no"></Calendar>
       <Title>Összes eseményünk</Title>
       <Items>
         {res.filter(el => state.source[el.type][el.id].categories[0] === 4).map((item) => {
@@ -39,7 +52,10 @@ const Events = ({ state, libraries, actions }) => {
   )
 }
 
-
+const Calendar = styled.iframe`
+  filter: invert(0) saturate(0.3) hue-rotate(1430deg);
+  margin-top: 10px;
+`
 const Title = styled.h4`
   display: block;
   text-transform: uppercase;

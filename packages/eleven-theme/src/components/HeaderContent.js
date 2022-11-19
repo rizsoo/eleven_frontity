@@ -6,7 +6,6 @@ import { isMobile } from 'react-device-detect';
 
 const HeaderContent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log(isMobile);
 
   return (
     <Header>
