@@ -25,7 +25,7 @@ const Events = ({ state, libraries, actions }) => {
   return (
     <>
       <Title>Naptár</Title>
-      {/* <Calendar src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23f5efe0&ctz=Europe%2FBudapest&showTitle=0&showDate=1&showPrint=0&showCalendars=0&showTz=0&mode=WEEK&title=Es%C3%A9nyek&src=ZWxldmVuaHVuZ2FyeUBnbWFpbC5jb20&color=%23039BE5" style={{borderWidth: "0"}} width="100%" height="300" frameborder="0" scrolling="no"></Calendar> */}
+      <Calendar src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23f5efe0&ctz=Europe%2FBudapest&showTitle=0&showDate=1&showPrint=0&showCalendars=0&showTz=0&mode=WEEK&title=Es%C3%A9nyek&src=ZWxldmVuaHVuZ2FyeUBnbWFpbC5jb20&color=%23039BE5" style={{borderWidth: "0"}} width="100%" height="300" frameborder="0" scrolling="no"></Calendar>
       <Title>Összes eseményünk</Title>
       <Items>
         {res.filter(el => state.source[el.type][el.id].categories[0] === 4).map((item) => {
