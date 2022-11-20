@@ -11,17 +11,6 @@ const Events = ({ state, libraries, actions }) => {
   const res = Object.values(state.source.post);
   const Html2React = libraries.html2react.Component;
 
-  // useEffect(() => {
-  //   async function getData() {
-  //     const response = await fetch(
-  //       `https://calendar.google.com/calendar/ical/elevenhungary%40gmail.com/public/basic.ics`
-  //     )
-  
-  //     console.log(response)
-  //   }
-  //   getData()
-  // }, [])
-  
   
   return (
     <>
