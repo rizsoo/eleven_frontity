@@ -37,10 +37,8 @@ export const portfolioHand = {
 
 const Root = ({ state, actions, libraries }) => {
     const data = state.source.get(state.router.link)
-    // console.log(data);
-    // const result = fetchHundredData.items;
-    // console.log(result);
-  return (
+
+    return (
     <>
         <Head>
             <title>ELEVEN Sportclub</title>

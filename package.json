@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "frontity dev",
-    "build": "frontity build",
+    "build": "run build",
     "serve": "frontity serve"
   },
   "prettier": {},

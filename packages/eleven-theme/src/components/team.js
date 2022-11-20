@@ -17,7 +17,6 @@ const Team = ({ state, libraries, actions }) => {
         <Items>
         {res.filter(el => state.source[el.type][el.id].categories[0] === 10).map((i) => {
           const post = state.source[i.type][i.id]
-          console.log(post);
           return (
               <HeaderItem key={i.id}>
                   <HeaderText>
