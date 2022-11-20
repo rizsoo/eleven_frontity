@@ -13,7 +13,6 @@ const NearbyEvents = ({ state, libraries }) => {
   function handlePopUpEvent() {
     setIsPopUp(true);
   }
-  console.log(data.items);
 
   return (
     <>

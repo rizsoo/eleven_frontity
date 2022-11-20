@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect, styled } from "frontity"
 
-
 const PostHeader = ({title, post, handlePopUpEvent}) => {
   return (
     <PostTitle>

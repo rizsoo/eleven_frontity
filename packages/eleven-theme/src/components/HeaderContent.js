@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect, Global, css, styled, Head } from "frontity"
+import { connect, styled } from "frontity"
 import Link from "@frontity/components/link"
 import { useState } from 'react'
 import { isMobile } from 'react-device-detect';
@@ -32,7 +32,6 @@ const HeaderContent = () => {
           <Facebook><Link target="_blank" link="https://www.facebook.com/elevensportclub"><ion-icon name="logo-facebook"></ion-icon></Link></Facebook>
           <Instagram><Link target="_blank" link="https://www.instagram.com/eleven.hungary/"><ion-icon name="logo-instagram"></ion-icon></Link></Instagram>
         </Socials>
-    
         {isMenuOpen ? null : <OpenMenu onClick={() => setIsMenuOpen(true)}><ion-icon name="compass-outline"></ion-icon></OpenMenu>}
       </SubHeader>
             

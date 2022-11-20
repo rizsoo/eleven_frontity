@@ -11,7 +11,6 @@ const Events = ({ state, libraries, actions }) => {
   const res = Object.values(state.source.post);
   const Html2React = libraries.html2react.Component;
 
-  
   return (
     <>
       <Title>Naptár</Title>

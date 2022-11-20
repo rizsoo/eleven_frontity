@@ -1,6 +1,5 @@
 import React from "react"
 import { connect, Global, css, styled, Head } from "frontity"
-import Link from "@frontity/components/link"
 import Switch from "@frontity/components/switch"
 
 import Loading from "./loading";

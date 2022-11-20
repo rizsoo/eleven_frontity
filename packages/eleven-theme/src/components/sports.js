@@ -3,15 +3,14 @@ import { connect, styled } from "frontity"
 import Link from "@frontity/components/link"
 import FeaturedMedia from "./featured_media"
 import { useEffect } from 'react'
-import { portfolioHand } from "."
 
-const Sports = ({ state, libraries, actions }) => {
+const Sports = ({ state, actions }) => {
   useEffect(() => {
     actions.source.fetch("/");
   }, []);
   const res = Object.values(state.source.post);
   // const data = state.source.get("/");
-  const Html2React = libraries.html2react.Component;
+  // const Html2React = libraries.html2react.Component;
   
   return (
     <>
