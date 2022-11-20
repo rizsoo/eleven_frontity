@@ -12,7 +12,6 @@
   },
   "scripts": {
     "dev": "frontity dev",
-    "build": "run build",
     "serve": "frontity serve"
   },
   "prettier": {},
