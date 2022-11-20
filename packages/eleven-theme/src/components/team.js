@@ -1,6 +1,5 @@
 import React from "react"
-import { connect, styled, Head } from "frontity"
-import Link from "@frontity/components/link"
+import { connect, styled } from "frontity"
 import FeaturedMedia from "./featured_media"
 import { useEffect } from 'react'
 
