@@ -8,6 +8,7 @@ import { Header, Logo, HeaderTitle, SubHeader, OpenMenu, CloseMenu, Menu, Facebo
 const HeaderContent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  
   return (
     <Header>
       <SubHeader>
