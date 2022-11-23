@@ -12,29 +12,7 @@ import Sports from "./sports";
 import Events from "./events";
 import Team from "./team";
 
-export const portfolioHand = {
-  pattern: "/portfolio",
-  func: async ({ route, params, state, libraries }) => {
-    const response = await libraries.source.api.get({
-      endpoint: "/",
-      params: {
-          per_page: 100,
-          _embed: true
-        }
-    });
-
-    const items = await libraries.source.populate({ response, state });
-
-    Object.assign(state.source.data[route], {
-      isPortfolioType: true,
-      items: items.items,
-      items
-    });
-    
-  }
-};
-
-const Root = ({ state, actions, libraries }) => {
+const Root = ({ state }) => {
     const data = state.source.get(state.router.link)
 
     return (

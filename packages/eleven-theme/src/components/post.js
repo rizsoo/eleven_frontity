@@ -6,11 +6,12 @@ import Popup from "./Popup"
 import PostHeader from "./Atoms/PostHeader"
 
 const Post = ({ state, libraries }) => {
+  const [isPopUp, setIsPopUp] = useState(false);
+
   const data = state.source.get(state.router.link)
   console.log(state.source.get("/"));
   const post = state.source[data.type][data.id]
   const Html2React = libraries.html2react.Component;
-  const [isPopUp, setIsPopUp] = useState(false);
   function handlePopUpEvent() {
     setIsPopUp(true);
   }
