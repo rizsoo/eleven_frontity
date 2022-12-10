@@ -72,9 +72,9 @@ const ItemText = styled.div`
 `
 const EventItem = styled.div`
   display: grid;
-  //flex-direction: column;
   grid-template-rows: 1fr 1fr;
   justify-content: flex-end;
+
   @media (min-width: 800px) {
     min-height: 350px;
     p {
@@ -91,7 +91,6 @@ const EventItem = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
   img {
     min-width: 100%;
-    min-height: 135px !important;
     object-fit: cover;
   }
   ion-icon {

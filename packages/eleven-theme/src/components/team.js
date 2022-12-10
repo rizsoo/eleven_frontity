@@ -35,7 +35,7 @@ const Team = ({ state, libraries, actions }) => {
                   <FeaturedMedia id={post.featured_media} />
                   <ItemText>
                     <EventTitle>{post.title.rendered}</EventTitle>
-                    <Html2React html={post.excerpt.rendered} />
+                    <Html2React html={post.excerpt.rendered.substring(0, 50)} />
                   </ItemText>                
               </EventItem>
           )
@@ -97,8 +97,9 @@ const HeaderItem = styled.div`
   margin: 18px 0;
   img {
     min-width: 100%;
-    min-height: 100% !important;
+    min-height: 100%;
     object-fit: cover;
+    max-width: 100%;
   }
   @media (max-width: 800px) {
     grid-template-rows: 1fr 1fr;
@@ -125,6 +126,7 @@ const EventItem = styled.div`
     min-width: 100%;
     min-height: 100% !important;
     object-fit: cover;
+    max-width: 100%;
   }
   ion-icon {
     color: #6d6d6d;

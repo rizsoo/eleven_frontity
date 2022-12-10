@@ -85,9 +85,6 @@ const Main = styled.main`
   max-width: 75rem;
   padding: 0;
   margin: auto;
-  img {
-    max-width: 100%;
-  }
   h2 {
     margin: 0.5em 0;
   }
