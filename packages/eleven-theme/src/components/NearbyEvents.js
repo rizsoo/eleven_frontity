@@ -93,7 +93,7 @@ const Item = styled.div`
     min-width: 50%;
     max-height: 250px !important;
     object-fit: cover;
-    object-position: top;
+    object-position: center !important;
   }
   ion-icon {
     color: #6d6d6d;
