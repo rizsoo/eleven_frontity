@@ -35,7 +35,7 @@ const Team = ({ state, libraries, actions }) => {
                   <FeaturedMedia id={post.featured_media} />
                   <ItemText>
                     <EventTitle>{post.title.rendered}</EventTitle>
-                    <Html2React html={post.excerpt.rendered.substring(0, 50)} />
+                    <Html2React html={(post.excerpt.rendered).substring(0, 50)} />
                   </ItemText>                
               </EventItem>
           )
