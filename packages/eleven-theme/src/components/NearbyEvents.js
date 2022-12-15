@@ -89,6 +89,7 @@ const Item = styled.div`
   border-radius: 5px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
+  cursor: pointer;
   img {
     min-width: 50%;
     max-height: 250px !important;
@@ -103,9 +104,12 @@ const Item = styled.div`
     flex-direction: column;
     height: auto;
   }
-  transition: lineal 1s;
+  transition: 0.2s ease-in-out;
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.005);
+    img {
+      transform: scale(1.005);
+    }
   }
 `
 const Items = styled.div`
