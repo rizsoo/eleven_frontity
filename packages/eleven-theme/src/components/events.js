@@ -90,9 +90,9 @@ const EventItem = styled.div`
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
   img {
-    min-width: 100%;
+    width: 100%;
     object-fit: cover;
-    max-height: 100%;
+    height: 100%;
   }
   ion-icon {
     color: #6d6d6d;
