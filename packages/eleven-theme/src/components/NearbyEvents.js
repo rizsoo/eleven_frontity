@@ -103,6 +103,10 @@ const Item = styled.div`
     flex-direction: column;
     height: auto;
   }
+  transition: lineal 1s;
+  &:hover {
+    transform: scale(1.01);
+  }
 `
 const Items = styled.div`
   display: flex;
