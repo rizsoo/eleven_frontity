@@ -22,6 +22,7 @@ const HeaderContent = () => {
           <CloseMenu><ion-icon name="close-circle-outline"></ion-icon></CloseMenu >
           <Link link="/esemenyek">Események</Link>
           <Link link="/sportok">Sportok</Link>
+          <Link link="/szolgaltatasok">Szolgáltatások</Link>
           <Link link="/rolunk">Rólunk</Link>
           <Link link="/kapcsolat">Kapcsolat</Link>
           {isMobile ? <SocialsMobile>
