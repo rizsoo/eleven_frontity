@@ -95,6 +95,7 @@ const Item = styled.div`
     max-height: 250px !important;
     object-fit: cover;
     object-position: center !important;
+    transition: 0.2s ease-in-out;
   }
   ion-icon {
     color: #6d6d6d;
@@ -108,7 +109,7 @@ const Item = styled.div`
   &:hover {
     transform: scale(1.005);
     img {
-      transform: scale(1.005);
+      transform: scale(1.01);
     }
   }
 `
