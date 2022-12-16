@@ -76,7 +76,7 @@ const EventItem = styled.div`
   justify-content: flex-end;
 
   @media (min-width: 800px) {
-    min-height: 350px;
+    min-height: 400px;
     p {
       margin: 0px !important;
     }
@@ -97,6 +97,12 @@ const EventItem = styled.div`
   ion-icon {
     color: #6d6d6d;
     font-size: 18px;
+  }
+  &:hover {
+    transform: scale(1.005);
+    img {
+      transform: scale(1.02);
+    }
   }
   @media (max-width: 800px) {
     img {

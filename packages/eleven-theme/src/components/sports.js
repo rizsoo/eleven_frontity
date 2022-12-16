@@ -81,6 +81,12 @@ const Item = styled.div`
     color: #6d6d6d;
     font-size: 18px;
   }
+  &:hover {
+    transform: scale(1.005);
+    img {
+      transform: scale(1.02);
+    }
+  }
   @media (max-width: 800px) {
     img {
       max-height: 110px !important;

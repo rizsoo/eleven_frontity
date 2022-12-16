@@ -109,7 +109,7 @@ const Item = styled.div`
   &:hover {
     transform: scale(1.005);
     img {
-      transform: scale(1.01);
+      transform: scale(1.02);
     }
   }
 `
