@@ -93,15 +93,17 @@ const EventItem = styled.div`
     width: 100%;
     object-fit: cover;
     height: 100%;
+    transition: 0.2s ease-in-out;
   }
   ion-icon {
     color: #6d6d6d;
     font-size: 18px;
   }
+  transition: 0.2s ease-in-out;
   &:hover {
     transform: scale(1.005);
     img {
-      transform: scale(1.02);
+      transform: scale(1.04);
     }
   }
   @media (max-width: 800px) {
