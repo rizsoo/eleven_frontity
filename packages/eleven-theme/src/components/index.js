@@ -87,19 +87,6 @@ const Main = styled.main`
   margin: auto;
   h2 {
     margin: 0.5em 0;
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.7rem;
-    margin: 0.5em 0;
-  }
-  h4 {
-    font-size: 1.3rem;
-    margin: 0.5em 0;
-  }
-  h5 {
-    font-size: 1rem;
-    margin: 0.5em 0;
   }
   p {
     line-height: 1.25em;
