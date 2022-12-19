@@ -88,6 +88,15 @@ const Main = styled.main`
   h2 {
     margin: 0.5em 0;
   }
+  h3 {
+    font-size: 4rem;
+  }
+  h4 {
+    font-size: 3.2rem;
+  }
+  h5 {
+    font-size: 2.4rem;
+  }
   p {
     line-height: 1.25em;
     margin-bottom: 1.2em;
