@@ -1,10 +1,17 @@
 import React from "react"
 import { connect, styled } from "frontity"
 
-const Popup = () => {
+const Popup = ({libraries, post}) => {
+  const Html2React = libraries.html2react.Component;
   return (
     <PopUp>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqApSpCIYpYHyJzsOkmBNQjaGyxN9JtTU_thDY-l2uyVWRpQ/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Betöltés…</iframe>
+        <Html2React html={
+          `<!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget" data-url=${post.acf.calendly} style="min-width:100%;height:630px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->`
+          } />
+        {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqApSpCIYpYHyJzsOkmBNQjaGyxN9JtTU_thDY-l2uyVWRpQ/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Betöltés…</iframe> */}
     </PopUp>
   )
 }

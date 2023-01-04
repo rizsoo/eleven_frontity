@@ -9,7 +9,7 @@ const Post = ({ state, libraries }) => {
   const [isPopUp, setIsPopUp] = useState(false);
 
   const data = state.source.get(state.router.link)
-  console.log(state.source.get("/"));
+  // console.log(state.source.get("/"));
   const post = state.source[data.type][data.id]
   const Html2React = libraries.html2react.Component;
   function handlePopUpEvent() {
@@ -22,8 +22,8 @@ const Post = ({ state, libraries }) => {
             <title>{post.title.rendered}</title>
             <meta name="description" content={post.excerpt.rendered} />
         </Head>
-          {isPopUp? <Popup /> : null}
-          {isPopUp? <Shadow onClick={() => setIsPopUp(false)} /> : null}
+          {/* {isPopUp? <Popup post={post} /> : null}
+          {isPopUp? <Shadow onClick={() => setIsPopUp(false)} /> : null} */}
         <FeaturedMedia id={post.featured_media} />
         <PostHeader title={post.title.rendered} post={post} handlePopUpEvent={handlePopUpEvent} />
         <PostText>
