@@ -30,6 +30,9 @@ const Root = ({ state }) => {
             />
             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" />
             <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" />
+        		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+		        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+		        <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/elevenhungary', text: 'Jelentkezés', color: '#0069ff', textColor: '#ffffff', branding: false }) }</script>
         </Head>
         <Global
             styles={css`
