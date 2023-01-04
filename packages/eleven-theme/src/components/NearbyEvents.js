@@ -31,7 +31,7 @@ const NearbyEvents = ({ state, libraries }) => {
                   <Html2React html={post.excerpt.rendered} />
                   <Data><ion-icon name="calendar-outline" /><p>{post.acf.date}</p></Data>
                   <Data><ion-icon name="location-outline" /><p>{post.acf.location}</p></Data>
-                  <SignUp onClick={handlePopUpEvent}>Jelentkezés</SignUp>
+                  {/* <SignUp onClick={handlePopUpEvent}>Jelentkezés</SignUp> */}
                   </ItemText>                
               </Item>
           )
