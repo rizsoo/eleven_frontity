@@ -22,8 +22,8 @@ const Post = ({ state, libraries }) => {
             <title>{post.title.rendered}</title>
             <meta name="description" content={post.excerpt.rendered} />
         </Head>
-          {isPopUp? <Popup post={post} /> : null}
-          {isPopUp? <Shadow onClick={() => setIsPopUp(false)} /> : null}
+          {/* {isPopUp? <Popup post={post} /> : null}
+          {isPopUp? <Shadow onClick={() => setIsPopUp(false)} /> : null} */}
         <FeaturedMedia id={post.featured_media} />
         <PostHeader title={post.title.rendered} post={post} handlePopUpEvent={handlePopUpEvent} />
         <PostText>

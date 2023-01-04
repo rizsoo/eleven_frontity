@@ -10,7 +10,7 @@ const PostHeader = ({title, post, handlePopUpEvent}) => {
           {post.categories[0] === 4 ?<PostInnerData><ion-icon name="calendar-outline" /><p>{post.acf.date}</p></PostInnerData>: null}
           {post.categories[0] === 4 ?<PostInnerData><ion-icon name="location-outline" /><p>{post.acf.location}</p></PostInnerData>: null}
         </PostHeaderContent>
-        {post.categories[0] === 4 && post.acf.calendly ? <SignUp onClick={handlePopUpEvent}>Jelentkezés</SignUp> : null}
+        {/* {post.categories[0] === 4 && post.acf.calendly ? <SignUp onClick={handlePopUpEvent}>Jelentkezés</SignUp> : null} */}
     </PostTitle>
   )
 }
