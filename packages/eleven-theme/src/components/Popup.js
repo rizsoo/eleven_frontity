@@ -4,8 +4,8 @@ import { connect, styled } from "frontity"
 const Popup = ({post}) => {
   return (
     <PopUp>
-        {post.acf.location && post.acf.calendry}
-        <div dangerouslySetInnerHTML={{__html: post.acf.calendry}}></div>
+        <div class="calendly-inline-widget" data-url={post.acf.calendry} style={{minWidth: "320px;", height: "630px;"}}></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqApSpCIYpYHyJzsOkmBNQjaGyxN9JtTU_thDY-l2uyVWRpQ/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Betöltés…</iframe> */}
     </PopUp>
   )
