@@ -92,6 +92,7 @@ const EventItem = styled.div`
   img {
     min-width: 100%;
     object-fit: cover;
+    max-height: 100%;
   }
   ion-icon {
     color: #6d6d6d;
