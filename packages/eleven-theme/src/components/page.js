@@ -22,12 +22,16 @@ const PageTitle = styled.h2`
 const PageContent = styled.div`
   background-color: white;
   padding: 15px;
+  @media (min-width: 1200px) {
+    padding: 20px 20%;
+  }
   img {
     max-height: 400px;
     height: 100%;
     width: auto;
-    padding: 20px;
+    padding: 20px 0;
     margin: 0 auto !important;
+    max-width: 100%;
   }
 `
 

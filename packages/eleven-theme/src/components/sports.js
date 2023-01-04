@@ -76,10 +76,18 @@ const Item = styled.div`
     min-width: 100%;
     min-height: 180px !important;
     object-fit: cover;
+    transition: 0.2s ease-in-out;
   }
   ion-icon {
     color: #6d6d6d;
     font-size: 18px;
+  }
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.005);
+    img {
+      transform: scale(1.04);
+    }
   }
   @media (max-width: 800px) {
     img {

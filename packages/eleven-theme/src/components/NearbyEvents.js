@@ -89,11 +89,13 @@ const Item = styled.div`
   border-radius: 5px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
+  cursor: pointer;
   img {
     min-width: 50%;
     max-height: 250px !important;
     object-fit: cover;
-    object-position: top;
+    object-position: center !important;
+    transition: 0.2s ease-in-out;
   }
   ion-icon {
     color: #6d6d6d;
@@ -102,6 +104,13 @@ const Item = styled.div`
   @media (max-width: 800px) {
     flex-direction: column;
     height: auto;
+  }
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.005);
+    img {
+      transform: scale(1.02);
+    }
   }
 `
 const Items = styled.div`

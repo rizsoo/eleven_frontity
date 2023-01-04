@@ -76,7 +76,7 @@ const EventItem = styled.div`
   justify-content: flex-end;
 
   @media (min-width: 800px) {
-    min-height: 350px;
+    min-height: 400px;
     p {
       margin: 0px !important;
     }
@@ -90,13 +90,21 @@ const EventItem = styled.div`
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
   img {
-    min-width: 100%;
+    width: 100%;
     object-fit: cover;
-    max-height: 100%;
+    height: 100%;
+    transition: 0.2s ease-in-out;
   }
   ion-icon {
     color: #6d6d6d;
     font-size: 18px;
+  }
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.005);
+    img {
+      transform: scale(1.04);
+    }
   }
   @media (max-width: 800px) {
     img {
