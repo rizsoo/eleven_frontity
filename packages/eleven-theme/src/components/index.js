@@ -12,8 +12,14 @@ import Sports from "./sports";
 import Events from "./events";
 import Team from "./team";
 
-const Root = ({ state }) => {
+const Root = ({ state, libraries }) => {
     const data = state.source.get(state.router.link)
+    const Html2React = libraries.html2react.Component;
+    const calendly = `<!-- Calendly badge widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/elevenhungary', text: 'Jelentkezés', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
+    <!-- Calendly badge widget end -->`
 
     return (
     <>
@@ -73,6 +79,7 @@ const Root = ({ state }) => {
             <Error when={data.isError} />
         </Switch>
     </Main>
+    <Html2React html={calendly} />
     </>
   )
 }
