@@ -5,7 +5,7 @@ const Popup = ({libraries, post}) => {
   const Html2React = libraries.html2react.Component;
   return (
     <PopUp>
-        <Html2React html={post.acf.calendry} />
+        <Html2React html={post.acf.calendly} />
         {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdqApSpCIYpYHyJzsOkmBNQjaGyxN9JtTU_thDY-l2uyVWRpQ/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Betöltés…</iframe> */}
     </PopUp>
   )
