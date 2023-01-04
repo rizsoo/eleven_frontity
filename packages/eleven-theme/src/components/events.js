@@ -10,7 +10,7 @@ const Events = ({ state, libraries, actions }) => {
   }, []);
   const res = Object.values(state.source.post);
   const Html2React = libraries.html2react.Component;
-  const calendly = `<div class="calendly-inline-widget" data-url="https://calendly.com/elevenhungary" style="width:100%;height:1100px"></div>
+  const calendly = `<div id="child-iframe" class="calendly-inline-widget" data-url="https://calendly.com/elevenhungary" style="width:100%;height:1100px"></div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script>
 	let iframe = document.querySelector("#child-iframe");
